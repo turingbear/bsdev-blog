@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import logoWhite from '../static/logoWhite.png'
+import logoWhite from '../public/logoWhite.png'
 
 
 function Header() {
