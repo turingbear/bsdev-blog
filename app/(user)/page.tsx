@@ -3,7 +3,8 @@
 
 function HomePage() {
   return (
-    <div className="text-red-500 text-xl">page</div>
+    <div className="text-red-500">
+    </div>
   )
 }
 export default HomePage
