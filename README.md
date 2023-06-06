@@ -1,27 +1,31 @@
-# Next.js + Tailwind CSS Example
+# About this project:
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+The application includes a customized backend design using Sanity Studio(a headless backend content management system). This is mobile responsive and was built using the following: NextJS with TypeScript, Tailwind, Embedded and custom designed Sanity Studio. **see package.json for all the packages I used**
 
-## Deploy your own
+## Install and configure
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+```yarn```
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+or
+```npm install```
 
-## How to use
+- Create a Sanity Studio account if you don't already have one. https://www.sanity.io/.
+- Create a project **DO NOT DEPLOY THE STUDIO AS THIS IS AN EMBEDDED STUDIO**
+- Create a Dataset (i.e. 'production')
+- Set the CORS origins for your application
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
+- Create a .env.local file in the root directory of this application and add the following lines.
+  
+```
+NEXT_PUBLIC_SANITY_PROJECT_ID=<project_id> (This can be found on the main project dashboard page in Sanity Studio)
+NEXT_PUBLIC_SANITY_DATASET=<dataset_name> (Whatever you named your dataset)
+NEXT_PUBLIC_SANITY_API_VERSION=v2021-10-21 (For more information on choosing an api version see https://www.sanity.io/docs/api-versioning)
+```
+## Start up the Dev server
+
+```
+npm run dev
 ```
 
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
 
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
