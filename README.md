@@ -7,6 +7,7 @@ The application includes a customized backend design using Sanity Studio(a headl
 ```yarn```
 
 or
+
 ```npm install```
 
 - Create a Sanity Studio account if you don't already have one. https://www.sanity.io/.
